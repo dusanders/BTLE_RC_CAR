@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>BluetoothLeScanCallback.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; }
+.s0 { color: rgb(204,120,50); }
+.s1 { color: rgb(169,183,198); }
+.s2 { color: rgb(98,151,85); }
+</style>
+</head>
+<BODY BGCOLOR="#2b2b2b">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#C0C0C0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+BluetoothLeScanCallback.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+
+<a name="l1"><span class="ln">1    </span></a><span class="s0">package </span><span class="s1">com.zena.btcomm.app</span><span class="s0">;</span><span class="s1"> 
+<a name="l2"><span class="ln">2    </span></a> 
+<a name="l3"><span class="ln">3    </span></a></span><span class="s0">import </span><span class="s1">android.app.Activity</span><span class="s0">;</span><span class="s1"> 
+<a name="l4"><span class="ln">4    </span></a></span><span class="s0">import </span><span class="s1">android.bluetooth.BluetoothAdapter</span><span class="s0">;</span><span class="s1"> 
+<a name="l5"><span class="ln">5    </span></a></span><span class="s0">import </span><span class="s1">android.bluetooth.BluetoothDevice</span><span class="s0">;</span><span class="s1"> 
+<a name="l6"><span class="ln">6    </span></a> 
+<a name="l7"><span class="ln">7    </span></a></span><span class="s2">/** 
+<a name="l8"><span class="ln">8    </span></a> * Created by Zena on 10/11/2014. 
+<a name="l9"><span class="ln">9    </span></a> */</span><span class="s1"> 
+<a name="l10"><span class="ln">10   </span></a></span><span class="s0">public class </span><span class="s1">BluetoothLeScanCallback </span><span class="s0">implements </span><span class="s1">BluetoothAdapter.LeScanCallback { 
+<a name="l11"><span class="ln">11   </span></a>    </span><span class="s0">private </span><span class="s1">Activity lActivity</span><span class="s0">;</span><span class="s1"> 
+<a name="l12"><span class="ln">12   </span></a>    </span><span class="s0">public </span><span class="s1">BluetoothLeScanCallback (Activity activity) { 
+<a name="l13"><span class="ln">13   </span></a>        lActivity = activity</span><span class="s0">;</span><span class="s1"> 
+<a name="l14"><span class="ln">14   </span></a>    } 
+<a name="l15"><span class="ln">15   </span></a>    @Override 
+<a name="l16"><span class="ln">16   </span></a>    </span><span class="s0">public void </span><span class="s1">onLeScan(</span><span class="s0">final </span><span class="s1">BluetoothDevice bluetoothDevice</span><span class="s0">, int </span><span class="s1">i</span><span class="s0">, byte</span><span class="s1">[] bytes) { 
+<a name="l17"><span class="ln">17   </span></a>        lActivity.runOnUiThread(</span><span class="s0">new </span><span class="s1">Runnable() { 
+<a name="l18"><span class="ln">18   </span></a>            @Override 
+<a name="l19"><span class="ln">19   </span></a>            </span><span class="s0">public void </span><span class="s1">run() { 
+<a name="l20"><span class="ln">20   </span></a>                MainActivity.addBluetoothDevice(bluetoothDevice)</span><span class="s0">;</span><span class="s1"> 
+<a name="l21"><span class="ln">21   </span></a>            } 
+<a name="l22"><span class="ln">22   </span></a>        })</span><span class="s0">;</span><span class="s1"> 
+<a name="l23"><span class="ln">23   </span></a>    } 
+<a name="l24"><span class="ln">24   </span></a>} 
+<a name="l25"><span class="ln">25   </span></a></span></pre>
+</body>
+</html>
