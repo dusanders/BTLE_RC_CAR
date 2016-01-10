@@ -668,7 +668,7 @@
         </option>
         <option>
           <name>OutputFile</name>
-          <state>testingUART.d43</state>
+          <state>MspUART.d43</state>
         </option>
         <option>
           <name>OutputFormat</name>
@@ -992,7 +992,7 @@
         </option>
         <option>
           <name>OutputFile</name>
-          <state></state>
+          <state>$PROJ_FNAME$.ulp</state>
         </option>
         <option>
           <name>ULPStatus</name>
